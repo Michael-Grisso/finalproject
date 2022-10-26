@@ -6,11 +6,23 @@ import MainContent from "./components/MainContent";
 
 //this is the JSX code
 //and this function is called the app component or a custom component
+
+function List(props) {
+  return <ol>{props.children}</ol>;
+}
+
+function Item(props) {
+  return <li>{props.children}</li>;
+}
 function App() {
   return (
     <div>
       <Welcome />
-      <MainContent logo={logo} />
+      <List>
+        <Item>Item 1</Item>
+        <Item>Item 2</Item>
+        <Item>Item 3</Item>
+      </List>
       <GoodBye />
     </div>
   );
